@@ -1,0 +1,32 @@
+{% extends "index.html" %}{% block main %}
+<h2>Списки</h2>
+<p>
+  <b>Список</b> хранит упорядоченный набор элементов в квадратных скобках. Его
+  можно изменять после создания. Нумерация элементов начинается с нуля, а
+  отрицательные индексы отсчитываются с конца.
+</p>
+<div class="code">
+  <pre><code>
+fruits = [<span class="str">"яблоко"</span>, <span class="str">"банан"</span>, <span class="str">"вишня"</span>]
+
+<span class="accent">print</span>(fruits[<span class="num">0</span>])     #яблоко
+<span class="accent">print</span>(fruits[-<span class="num">1</span>])    #вишня
+
+fruits.append(<span class="str">"груша"</span>)      #добавить в конец
+fruits.remove(<span class="str">"банан"</span>)      #удалить по значению
+fruits[<span class="num">0</span>] = <span class="str">"апельсин"</span>      #заменить элемент
+<span class="accent">print</span>(len(fruits))          #количество элементов
+    </code></pre>
+</div>
+<p>
+  Из списка можно взять часть с помощью <b>среза</b>: numbers[1:4] вернёт
+  элементы с индексами 1, 2 и 3. Перебирать список удобно циклом for.
+</p>
+<p><b>Генератор списка</b> создаёт новый список в одну строку:</p>
+<div class="code">
+  <pre><code>
+squares = [x ** <span class="num">2</span> for x in range(<span class="num">1</span>, <span class="num">6</span>)]
+<span class="accent">print</span>(squares)    #[1, 4, 9, 16, 25]
+    </code></pre>
+</div>
+{% endblock %}

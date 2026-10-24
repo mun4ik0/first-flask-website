@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/root.css') }}"
+    />
+    <title>{% block title %}{{ title }}{% endblock %}</title>
+  </head>
+  <body>
+    <header>
+      {% block header %}
+      <h1>{{ h1 }}</h1>
+      {% endblock %}
+    </header>
+    <main>
+      <article>
+        {% block main %}{% endblock %}
+        <div class="buttons">
+          {% if num > 1 %}
+          <a href="{{ url_for('index',page=num-1) }}">
+            <button type="button">Назад</button>
+          </a>
+          {% endif %} {% if num < total %}
+          <a href="{{ url_for('index',page=num+1) }}">
+            <button type="button">Далее</button>
+          </a>
+          {% endif %}
+        </div>
+      </article>
+    </main>
+    <footer>
+      <a href="{{ url_for('about') }}">
+        <button type="button">About</button>
+      </a>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bodybackDark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1%;
+  height: min-content;
+}
+article {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+article > p {
+  width: 70%;
+}
+p,
+li,
+a {
+  font-size: 24px;
+  font-weight: 400;
+}
+a:hover {
+  color: blue;
+}
+p,
+h1,
+h2,
+li,
+a {
+  color: var(--textcolorDark);
+}
+li {
+  list-style: none;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 32px;
+  font-family: "Roboto", sans-serif;
+}
+main {
+  background-color: var(--mainbackDark);
+  border-radius: 25px;
+  border: 2px solid var(--bordercolorDark);
+  width: 80%;
+  height: 100%;
+}
+header {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 50px 0;
+  border-bottom: 2px solid var(--bordercolorDark);
+  width: 100%;
+}
+/* .last_but,
+.first_but {
+  width: 150px;
+  height: 25px;
+} */
+button {
+  background-color: var(--buttoncolorDark);
+  width: 75px;
+  height: 25px;
+  font-size: 18px;
+  color: black;
+  border: 2px black solid;
+  border-radius: 20px;
+}
+button:hover {
+  background-color: var(--buttoncolorhoverDark);
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15%;
+}
+.code {
+  background-color: var(--codebackDark);
+  color: var(--textcolorDark);
+  border: 1px solid var(--codeborderDark);
+  border-radius: 25px;
+  width: 80%;
+  /*height:20%;*/
+  display: flex;
+  justify-content: center;
+}
+.num {
+  color: var(--codedigitDark);
+}
+.str {
+  color: var(--codestrDark);
+}
+pre > code {
+  font-size: 24px;
+}
+.accent {
+  color: var(--codeaccentDark);
+}
+@media (max-width: 548px) {
+  p {
+    font-size: 28px;
+    width: 80%;
+  }
+  a {
+    font-size: 28px;
+  }
+  h1 {
+    font-size: 28px;
+  }
+  h2 {
+    font-size: 24px;
+    width: 80%;
+  }
+  /* body {
+    /*padding: 0;*/
+
+  /*height:min-content;*/
+  /*} */
+  main {
+    width: 95%;
+    /*height: 100%;*/
+  }
+  .code {
+    height: min-content;
+  }
+  /*body{*/
+  /*  height:*/
+  /*}*/
+}
+.theme {
+  border: 2px solid white;
+  border-radius: 150px;
+  position: absolute;
+  top: 95%;
+  left: 95%;
+}

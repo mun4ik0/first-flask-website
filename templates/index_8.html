@@ -1,0 +1,31 @@
+{% extends "index.html" %}{% block main %}
+<h2>Кортежи и множества</h2>
+<p>
+  <b>Кортеж</b> похож на список, но после создания его нельзя изменить. Он
+  записывается в круглых скобках и подходит для данных, которые не должны
+  меняться, например для координат.
+</p>
+<div class="code">
+  <pre><code>
+point = (<span class="num">10</span>, <span class="num">20</span>)
+x, y = point            #распаковка
+<span class="accent">print</span>(x, y)            #10 20
+    </code></pre>
+</div>
+<p>
+  <b>Множество</b> содержит только уникальные элементы и не хранит порядок. Оно
+  удобно для удаления дубликатов и для проверки, входит ли значение в набор.
+</p>
+<div class="code">
+  <pre><code>
+numbers = [<span class="num">1</span>, <span class="num">2</span>, <span class="num">2</span>, <span class="num">3</span>, <span class="num">3</span>, <span class="num">3</span>]
+unique = set(numbers)
+<span class="accent">print</span>(unique)           #{1, 2, 3}
+
+a = {<span class="num">1</span>, <span class="num">2</span>, <span class="num">3</span>}
+b = {<span class="num">3</span>, <span class="num">4</span>}
+<span class="accent">print</span>(a | b)            #объединение: {1, 2, 3, 4}
+<span class="accent">print</span>(a &amp; b)            #пересечение: {3}
+    </code></pre>
+</div>
+{% endblock %}

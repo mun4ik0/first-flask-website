@@ -1,0 +1,34 @@
+{% extends "index.html" %}{% block main %}
+<h2>Словари</h2>
+<p>
+  <b>Словарь</b> хранит данные в виде пар «ключ: значение». Это как телефонная
+  книга, где по имени находится номер. Значение достаётся по ключу, а не по
+  номеру позиции.
+</p>
+<div class="code">
+  <pre><code>
+user = {<span class="str">"name"</span>: <span class="str">"Анна"</span>, <span class="str">"age"</span>: <span class="num">25</span>}
+
+<span class="accent">print</span>(user[<span class="str">"name"</span>])         #Анна
+user[<span class="str">"city"</span>] = <span class="str">"Москва"</span>        #добавить новую пару
+<span class="accent">print</span>(user.get(<span class="str">"phone"</span>))     #None, ошибки не будет
+    </code></pre>
+</div>
+<p>
+  Если обратиться к несуществующему ключу через квадратные скобки, возникнет
+  ошибка KeyError. Метод <b>get()</b> вместо ошибки возвращает None или
+  значение, которое вы укажете вторым аргументом.
+</p>
+<p>Чтобы перебрать словарь, используйте метод <b>items()</b>:</p>
+<div class="code">
+  <pre><code>
+for key, value in user.items():
+    <span class="accent">print</span>(key, <span class="str">"-&gt;"</span>, value)
+    </code></pre>
+</div>
+<p>
+  <b>Как выбрать коллекцию:</b> нужен упорядоченный изменяемый набор - список;
+  неизменяемый - кортеж; доступ по имени - словарь; только уникальные значения -
+  множество.
+</p>
+{% endblock %}

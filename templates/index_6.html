@@ -1,0 +1,46 @@
+{% extends "index.html" %} {% block main %}
+<h2>Циклы</h2>
+<p>
+  Если нужно сделать одно и то же много раз, не копируйте код, а используйте
+  <b>цикл</b>. Цикл <b>for</b> перебирает элементы по очереди. Чаще всего его
+  используют с функцией <b>range()</b>, которая создаёт последовательность
+  чисел. Счёт начинается с нуля, а последнее число не включается.
+</p>
+<div class="code">
+  <pre><code>
+for i in range(<span class="num">5</span>):
+    <span class="accent">print</span>(i)       #0, 1, 2, 3, 4
+
+for letter in <span class="str">"Python"</span>:
+    <span class="accent">print</span>(letter)  #по одной букве
+    </code></pre>
+</div>
+<p>
+  Цикл <b>while</b> работает, пока условие остаётся истинным. Он удобен, когда
+  заранее неизвестно, сколько раз нужно повторять. Если условие никогда не
+  станет ложным, цикл будет бесконечным. Остановить такую программу можно
+  сочетанием клавиш Ctrl + C.
+</p>
+<div class="code">
+  <pre><code>
+count = <span class="num">3</span>
+while count &gt; <span class="num">0</span>:
+    <span class="accent">print</span>(count)
+    count -= <span class="num">1</span>
+    </code></pre>
+</div>
+<p>
+  Ходом цикла можно управлять: <b>break</b> немедленно завершает цикл, а
+  <b>continue</b> пропускает остаток текущего шага и переходит к следующему.
+</p>
+<div class="code">
+  <pre><code>
+for n in range(<span class="num">1</span>, <span class="num">11</span>):
+    if n % <span class="num">2</span> == <span class="num">0</span>:
+        continue      #пропускаем чётные
+    if n > <span class="num">7</span>:
+        break         #выходим после 7
+    <span class="accent">print</span>(n)          #1, 3, 5, 7
+    </code></pre>
+</div>
+{% endblock %}

@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --textcolor: #e2e8f0;
+  --buttoncolor: #60a5fa;
+  --buttoncolorhover: #4b98e0;
+  --bordercolor: #3e4451;
+  --codeback: #1e1e24;
+  --codeborder: #282c34;
+  --codecolor: #abb2bf;
+  --codeaccent: #c678dd;
+  --codestr: #98c379;
+  --codedigit: #d19a66;
+}
+body {
+  background-color: #181a1f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1%;
+  height: 135vh;
+}
+article {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
+article > p {
+  width: 70%;
+}
+p,
+li,
+a {
+  font-size: 24px;
+  font-weight: 400;
+}
+a:hover {
+  color: blue;
+}
+p,
+h1,
+h2,
+li,
+a {
+  color: var(--textcolor);
+}
+li {
+  list-style: none;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 32px;
+  font-family: "Roboto", sans-serif;
+}
+main {
+  background-color: #282c34;
+  border-radius: 25px;
+  border: 2px solid var(--bordercolor);
+  width: 80%;
+  height: 100%;
+}
+header {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 50px 0;
+  border-bottom: 2px solid var(--bordercolor);
+  width: 100%;
+}
+.first_but {
+  width: 150px;
+  height: 25px;
+}
+button {
+  background-color: var(--buttoncolor);
+  width: 75px;
+  height: 25px;
+  font-size: 18px;
+  color: black;
+  border: 2px black solid;
+  border-radius: 20px;
+}
+button:hover {
+  background-color: var(--buttoncolorhover);
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15%;
+}
+.code {
+  background-color: var(--codeback);
+  color: var(--textcolor);
+  border: 1px solid var(--codeborder);
+  border-radius: 25px;
+  width: 80%;
+  /*height:20%;*/
+  display: flex;
+  justify-content: center;
+}
+.num {
+  color: var(--codedigit);
+}
+.str {
+  color: var(--codestr);
+}
+pre > code {
+  font-size: 24px;
+}
+.accent {
+  color: var(--codeaccent);
+}
+@media (max-width: 548px) {
+  p {
+    font-size: 28px;
+    width: 80%;
+  }
+  a {
+    font-size: 28px;
+  }
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 24px;
+    width: 80%;
+  }
+  /* body {
+    /*padding: 0;*/
+
+  /*height:min-content;*/
+  /*} */
+  main {
+    width: 95%;
+    /*height: 100%;*/
+  }
+  .code {
+    height: min-content;
+  }
+  /*body{*/
+  /*  height:*/
+  /*}*/
+}

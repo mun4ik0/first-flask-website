@@ -1,0 +1,52 @@
+{% extends "index.html" %}{% block main %}
+<h2>Операторы и вычисления</h2>
+<p>
+  <b>Оператор</b> - это символ, который выполняет действие над значениями.
+  Порядок действий такой же, как в математике: сначала степень, затем умножение
+  и деление, потом сложение и вычитание. Скобки меняют порядок.
+</p>
+<div class="code">
+  <pre><code>
+<span class="accent">print</span>(<span class="num">7</span> + <span class="num">2</span>)    #9 - сложение
+<span class="accent">print</span>(<span class="num">7</span> - <span class="num">2</span>)    #5 - вычитание
+<span class="accent">print</span>(<span class="num">7</span> * <span class="num">2</span>)    #14 - умножение
+<span class="accent">print</span>(<span class="num">7</span> / <span class="num">2</span>)    #3.5 - деление
+<span class="accent">print</span>(<span class="num">7</span> // <span class="num">2</span>)   #3 - целочисленное деление
+<span class="accent">print</span>(<span class="num">7</span> % <span class="num">2</span>)    #1 - остаток от деления
+<span class="accent">print</span>(<span class="num">7</span> ** <span class="num">2</span>)   #49 - возведение в степень
+    </code></pre>
+</div>
+<p>
+  Обычное деление всегда возвращает дробное число. Остаток от деления (%) часто
+  используют для проверки чётности: если n % 2 == 0, число чётное.
+</p>
+<p>
+  <b>Операторы сравнения</b> возвращают True или False. Запомните: один знак =
+  это присваивание, а два знака == это сравнение.
+</p>
+<div class="code">
+  <pre><code>
+<span class="accent">print</span>(<span class="num">5</span> > <span class="num">3</span>)     #True
+<span class="accent">print</span>(<span class="num">5</span> == <span class="num">5</span>)    #True
+<span class="accent">print</span>(<span class="num">5</span> != <span class="num">5</span>)    #False
+<span class="accent">print</span>(<span class="num">5</span> <= <span class="num">4</span>)    #False
+    </code></pre>
+</div>
+<p>
+  <b>Логические операторы</b> объединяют условия: <b>and</b> требует, чтобы были
+  верны оба условия, <b>or</b> - хотя бы одно, <b>not</b> меняет значение на
+  противоположное.
+</p>
+<div class="code">
+  <pre><code>
+age = <span class="num">20</span>
+has_ticket = True
+<span class="accent">print</span>(age >= <span class="num">18</span> and has_ticket)   #True
+<span class="accent">print</span>(not has_ticket)                #False
+    </code></pre>
+</div>
+<p>
+  Для сокращения записи есть составные операторы: x += 1 равносильно x = x + 1.
+  Так же работают -=, *= и /=.
+</p>
+{% endblock %}

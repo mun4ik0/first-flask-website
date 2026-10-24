@@ -1,0 +1,42 @@
+{% extends "index.html" %} {% block main %}
+<h2>Условия</h2>
+<p>
+  Обычно программа не просто идёт сверху вниз, а выбирает путь в зависимости от
+  обстоятельств. Для этого служит конструкция <b>if</b>. Python проверяет
+  условия по порядку: как только находится первое истинное, выполняется его
+  блок, а остальные пропускаются.
+</p>
+<div class="code">
+  <pre><code>
+temperature = <span class="num">15</span>
+
+if temperature > <span class="num">25</span>:
+    <span class="accent">print</span>(<span class="str">"Жарко"</span>)
+elif temperature > <span class="num">10</span>:
+    <span class="accent">print</span>(<span class="str">"Комфортная погода"</span>)
+else:
+    <span class="accent">print</span>(<span class="str">"Холодно"</span>)
+    </code></pre>
+</div>
+<p>
+  Блоки <b>elif</b> и <b>else</b> необязательны. Блок else срабатывает, если ни
+  одно условие не подошло.
+</p>
+<p>
+  Главная особенность Python - <b>отступы</b>. После двоеточия следующие строки
+  сдвигаются на четыре пробела, и именно этот сдвиг показывает, какой код
+  относится к условию. Неверные отступы приводят к ошибке IndentationError.
+</p>
+<p>
+  Принадлежность значения набору можно проверить с помощью <b>in</b>. Кроме
+  того, пустая строка, число 0, пустой список и None считаются ложными
+  значениями, а всё остальное - истинными.
+</p>
+<div class="code">
+  <pre><code>
+answer = <span class="accent">input</span>(<span class="str">"Продолжить? (да/нет): "</span>)
+if answer in (<span class="str">"да"</span>, <span class="str">"yes"</span>, <span class="str">"y"</span>):
+    <span class="accent">print</span>(<span class="str">"Продолжаем"</span>)
+    </code></pre>
+</div>
+{% endblock %}

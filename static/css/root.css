@@ -1,0 +1,43 @@
+:root.light_theme {
+  /* ===== Светлая тема ===== */
+  --bodybackLight: #f7f8fa;
+  --surfaceLight: #ffffff;
+  --textcolorLight: #1f2933;
+  --textmutedLight: #5b6672;
+  --bordercolorLight: #e3e7ee;
+
+  --buttoncolorLight: #306998;
+  --buttoncolorhoverLight: #25557a;
+  --buttontextLight: #ffffff;
+  --headeraccentLight: #ffd43b;
+
+  --codebackLight: #f1f4f9;
+  --codeborderLight: #dde3ec;
+  --codecolorLight: #24292f;
+  --codecommentLight: #5f6b7a;
+  --codeaccentLight: #6f42c1;
+  --codestrLight: #0e7036;
+  --codedigitLight: #a64b0a;
+}
+:root {
+  /* ===== Тёмная тема ===== */
+  --bodybackDark: #181a1f;
+  --mainbackDark: #282c34;
+  --surfaceDark: #1e2025;
+  --textcolorDark: #e2e8f0;
+  --textmutedDark: #8b95a5;
+  --bordercolorDark: #3e4451;
+
+  --buttoncolorDark: #60a5fa;
+  --buttoncolorhoverDark: #4b98e0;
+  --buttontextDark: #181a1f;
+  --headeraccentDark: #ffd43b;
+
+  --codebackDark: #1e1e24;
+  --codeborderDark: #282c34;
+  --codecolorDark: #abb2bf;
+  --codecommentDark: #7f848e;
+  --codeaccentDark: #c678dd;
+  --codestrDark: #98c379;
+  --codedigitDark: #d19a66;
+}
